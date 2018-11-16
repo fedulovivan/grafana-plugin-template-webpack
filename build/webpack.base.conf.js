@@ -7,11 +7,14 @@ const ExtractTextPluginBase = new ExtractTextPlugin('./css/panel.base.css');
 const ExtractTextPluginLight = new ExtractTextPlugin('./css/panel.light.css');
 const ExtractTextPluginDark = new ExtractTextPlugin('./css/panel.dark.css');
 
+const env = process.env.NODE_ENV || 'development';
+
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
 module.exports = {
+  // mode: env,
   target: 'node',
   context: resolve('src'),
   entry: './module.js',
@@ -40,6 +43,9 @@ module.exports = {
     ExtractTextPluginBase,
     ExtractTextPluginLight,
     ExtractTextPluginDark,
+    new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify('development')
+    }),
   ],
   resolve: {
     alias: {
@@ -55,7 +61,13 @@ module.exports = {
           loader: 'babel-loader',
           query: {
             presets: [
-              require.resolve('babel-preset-env')
+              require.resolve('babel-preset-env'),
+              'react',
+            ],
+            plugins: [
+              "transform-class-properties",
+              "transform-custom-element-classes",
+              "transform-es2015-classes",
             ]
           }
         }

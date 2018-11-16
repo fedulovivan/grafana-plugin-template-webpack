@@ -24,5 +24,12 @@
     "style-loader": "^0.20.1",
     "webpack": "^3.6.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-custom-element-classes": "^0.1.0",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
 }

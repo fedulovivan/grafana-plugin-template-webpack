@@ -1,3 +1,20 @@
-<div id="grafana-plugin-template-webpack">
+<div
+  class="hello"
+>
+
   Hello from <b>Template Plugin</b>
+  modified by ivanf
+
+  <div style="color:{{ctrl.panel.ivanfSettings.color}}">angular: {{ctrl.panel.ivanfSettings.color}}</div>
+
+  <!-- <my-element ctrl={{ctrl.anyData}} /> -->
+  <!-- <react-directive  todos=todos mark-complete="markItemCompleted(text)"></react-directive> -->
+  <!-- paneltitle=1 pt={{ctrl.panel.title}} -->
+  <!-- anydata={{anydata}} -->
+
+  <react-directive color=ctrl.panel.ivanfSettings.color title=ctrl.panel.title on-change-title=onChangeTitle(value) />
+
+  <!-- <input type="text" ng-model='ctrl.panel.title'></input> -->
+  <!-- <react-directive color=ctrl.panel.ivanfSettings.color /> -->
+
 </div>
