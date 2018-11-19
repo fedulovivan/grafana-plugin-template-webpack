@@ -12,9 +12,16 @@
   <!-- paneltitle=1 pt={{ctrl.panel.title}} -->
   <!-- anydata={{anydata}} -->
 
-  <react-directive color=ctrl.panel.ivanfSettings.color title=ctrl.panel.title on-change-title=onChangeTitle(value) />
+  <react-directive
+    color=ctrl.panel.ivanfSettings.color
+    title=ctrl.panel.title
+    on-change-title=onChangeTitle(value)
+    queries-data=ctrl.queriesData
+  />
 
   <!-- <input type="text" ng-model='ctrl.panel.title'></input> -->
   <!-- <react-directive color=ctrl.panel.ivanfSettings.color /> -->
+
+  <!-- <pre>{{ctrl.queriesData}}</pre> -->
 
 </div>
